@@ -199,8 +199,7 @@ nav.active{
 .hero-image img{
 
     width:100%;
-
-    max-width:480px;
+    max-width:280px;
 
     position:relative;
 
@@ -329,6 +328,12 @@ nav.active{
 /* MOBILE */
 
 @media(max-width:900px){
+
+       .hero{
+        min-height:auto;
+        padding:60px 0 80px;
+    }
+
 
 .hero-grid{
 
@@ -1222,6 +1227,34 @@ text-align: center;
 
     background: #056fa9;
 
+} 
+
+@media (max-width: 900px) {
+
+    .contact-wrapper{
+        grid-template-columns:1fr;
+        gap:60px;
+    }
+
+    .contact-info{
+        text-align:center;
+    }
+
+    .contact-info p{
+        max-width:100%;
+        margin:0 auto 40px;
+    }
+
+    .contact-email,
+    .social-links{
+        justify-content:center;
+    }
+
+    .contact-form button{
+        float:none;
+        width:100%;
+    }
+
 }
 
 
@@ -1313,7 +1346,8 @@ text-align: center;
 
 .image-blob{
     position:relative;
-    width:400px;
+      width:100%;
+    max-width:280px;
     height:400px;
 
     animation:strokeMorph 8s ease-in-out infinite;
