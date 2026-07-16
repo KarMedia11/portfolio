@@ -1598,6 +1598,70 @@ text-align: center;
         transform:translateY(0);
     }
 
+}  
+
+
+.figma-section {
+  text-align: center;
+  margin-top: 80px ;
+  cursor: none;
 } 
+
+.figma-section h2 {
+  display: inline-block;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 5px solid #1acb8b;
+} 
+
+.figma-subtitle {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.05rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+.figma-embed {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto 24px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+.figma-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.figma-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 28px;
+
+  background: #1acb8b;
+  color: white;
+  text-decoration: none;
+
+  font-weight: 600;
+  border-radius: 50px;
+
+  transition: .3s ease;
+}
+
+.figma-btn:hover {
+  background: #159b69;
+  transform: translateY(-2px);
+}
 
 
