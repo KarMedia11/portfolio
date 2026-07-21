@@ -1,4 +1,11 @@
+  // Google Analytics
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-RCPLRD82K2');
+
+//Vercel Analytics
   window.va = window.va || function () {
     (window.vaq = window.vaq || []).push(arguments);
   };
