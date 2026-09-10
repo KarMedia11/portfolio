@@ -100,3 +100,18 @@ form.addEventListener("submit", async (e) => {
 
     }
 });
+
+
+// Google Analytics
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-RCPLRD82K2');
+
+// Track custom events
+function trackEvent(eventName, parameters = {}) {
+    if (typeof gtag === "function") {
+        gtag("event", eventName, parameters);
+    }
+}
