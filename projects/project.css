@@ -1,3 +1,17 @@
+/* =========================================================
+   RESET
+========================================================= */
+:root {
+  --primary-bg: #0F172A;
+  --card-bg: #1E293B;
+  --heading: #F8FAFC;
+  --body: #94A3B8;
+  --accent: #FF6B00;
+
+  --border: #334155;
+  --white: #FFFFFF;
+} 
+
 .custom-cursor {
   position: fixed;
 
@@ -30,7 +44,7 @@ h1 {
 
 .overview {
   margin: 20px 0;
-  color: #191616;
+  color: white;
   line-height: 1.6;
 }
 
@@ -113,7 +127,7 @@ h1 {
 }
 
 .projects-section h2 {
-  color: black;
+  color: var(--heading);
 
   font-size: 32px;
 
@@ -171,7 +185,7 @@ h1 {
 
   font-weight: 500;
 
-  color: black;
+  color: #94A3B8;
 }
 
 /* HOVER */
