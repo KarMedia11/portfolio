@@ -247,334 +247,177 @@ document.querySelectorAll(".before-after").forEach((slider) => {
     
 
 });
-
-const carouselWrapper =
-    document.querySelector(".carousel-track-wrapper");
-
-let isDragging = false;
-let startX = 0;
-let startScrollLeft = 0;
-
-
 /* =========================================================
-   MOUSE DRAG
+   PROJECT CAROUSEL — DRAG LEFT / RIGHT
 ========================================================= */
 
-carouselWrapper.addEventListener("mousedown", (e) => {
-
-    isDragging = true;
-
-    carouselWrapper.classList.add("dragging");
-
-    startX = e.pageX;
-    startScrollLeft = carouselWrapper.scrollLeft;
-
-    e.preventDefault();
-});
-
-
-carouselWrapper.addEventListener("mousemove", (e) => {
-
-    if (!isDragging) return;
-
-    e.preventDefault();
-
-    const distance = e.pageX - startX;
-
-    carouselWrapper.scrollLeft =
-        startScrollLeft - distance;
-
-});
-
-
-/* =========================================================
-   STOP DRAGGING
-========================================================= */
-
-function stopDragging() {
-
-    isDragging = false;
-
-    carouselWrapper.classList.remove("dragging");
-}
-
-document.addEventListener("mouseup", stopDragging);
-
-carouselWrapper.addEventListener(
-    "mouseleave",
-    stopDragging
+const carouselWrapper = document.querySelector(
+    ".carousel-track-wrapper"
 );
 
+if (carouselWrapper) {
 
-/* =========================================================
-   TOUCH DRAG
-========================================================= */
+    let isDragging = false;
+    let startX = 0;
+    let startScrollLeft = 0;
 
-carouselWrapper.addEventListener(
-    "touchstart",
-    (e) => {
+    carouselWrapper.addEventListener("pointerdown", (e) => {
+
+        // Only allow left mouse button
+        if (e.pointerType === "mouse" && e.button !== 0) {
+            return;
+        }
 
         isDragging = true;
 
-        startX =
-            e.touches[0].pageX;
-
-        startScrollLeft =
-            carouselWrapper.scrollLeft;
-
-    },
-    { passive: true }
-);
-
-
-carouselWrapper.addEventListener(
-    "touchmove",
-    (e) => {
-
-        if (!isDragging) return;
-
-        const distance =
-            e.touches[0].pageX - startX;
-
-        carouselWrapper.scrollLeft =
-            startScrollLeft - distance;
-
-    },
-    { passive: true }
-);
-
-
-carouselWrapper.addEventListener(
-    "touchend",
-    stopDragging
-);
-
-/* =========================================================
-   SET INITIAL POSITION
-========================================================= */
-
-function setInitialPosition() {
-
-    const halfWidth =
-        carouselTrack.scrollWidth / 2;
-
-    carouselWrapper.scrollLeft = halfWidth;
-}
-
-setInitialPosition();
-
-
-/* =========================================================
-   INFINITE LOOP
-========================================================= */
-
-function normalizeCarouselPosition() {
-
-    const halfWidth =
-        carouselTrack.scrollWidth / 2;
-
-    /*
-     * Moved too far LEFT
-     * → jump forward by one copy
-     */
-
-    if (carouselWrapper.scrollLeft <= 0) {
-
-        carouselWrapper.scrollLeft += halfWidth;
-
-    }
-
-
-    /*
-     * Moved too far RIGHT
-     * → jump backward by one copy
-     */
-
-    else if (
-        carouselWrapper.scrollLeft >= halfWidth * 2
-    ) {
-
-        carouselWrapper.scrollLeft -= halfWidth;
-
-    }
-}
-
-
-
-
-/* =========================================================
-   MOUSE DRAG
-========================================================= */
-
-carouselWrapper.addEventListener(
-    "mousedown",
-    (e) => {
-
-        isDragging = true;
+        startX = e.clientX;
+        startScrollLeft = carouselWrapper.scrollLeft;
 
         carouselWrapper.classList.add("dragging");
 
-        startX = e.pageX;
-
-        startScrollLeft =
-            carouselWrapper.scrollLeft;
-
-        e.preventDefault();
-    }
-);
+        carouselWrapper.setPointerCapture(e.pointerId);
+    });
 
 
-carouselWrapper.addEventListener(
-    "mousemove",
-    (e) => {
+    carouselWrapper.addEventListener("pointermove", (e) => {
 
         if (!isDragging) return;
 
-        e.preventDefault();
-
-        const distance =
-            e.pageX - startX;
+        const distance = e.clientX - startX;
 
         carouselWrapper.scrollLeft =
             startScrollLeft - distance;
+    });
 
-        normalizeCarouselPosition();
+
+    function stopCarouselDrag(e) {
+
+        if (!isDragging) return;
+
+        isDragging = false;
+
+        carouselWrapper.classList.remove("dragging");
+
+        if (
+            e.pointerId !== undefined &&
+            carouselWrapper.hasPointerCapture(e.pointerId)
+        ) {
+            carouselWrapper.releasePointerCapture(
+                e.pointerId
+            );
+        }
     }
-);
 
 
-/* =========================================================
-   STOP DRAGGING
-========================================================= */
+    carouselWrapper.addEventListener(
+        "pointerup",
+        stopCarouselDrag
+    );
 
-function stopCarouselDrag() {
+    carouselWrapper.addEventListener(
+        "pointercancel",
+        stopCarouselDrag
+    );
 
-    if (!isDragging) return;
+    carouselWrapper.addEventListener(
+        "lostpointercapture",
+        () => {
 
-    isDragging = false;
+            isDragging = false;
 
-    carouselWrapper.classList.remove("dragging");
+            carouselWrapper.classList.remove(
+                "dragging"
+            );
+        }
+    );
 }
 
 
-document.addEventListener(
-    "mouseup",
-    stopCarouselDrag
-);
-
-
 /* =========================================================
-   TOUCH DRAG
+   CASE STUDY IMAGE — VERTICAL DRAG
 ========================================================= */
 
-carouselWrapper.addEventListener(
-    "touchstart",
-    (e) => {
+document.querySelectorAll(".case-study-image").forEach(
+    (container) => {
 
-        isDragging = true;
+        let isDragging = false;
+        let startY = 0;
+        let startScrollTop = 0;
 
-        startX =
-            e.touches[0].pageX;
+        container.addEventListener(
+            "pointerdown",
+            (e) => {
 
-        startScrollLeft =
-            carouselWrapper.scrollLeft;
+                if (
+                    e.pointerType === "mouse" &&
+                    e.button !== 0
+                ) {
+                    return;
+                }
 
-    },
-    { passive: true }
-);
+                isDragging = true;
 
+                startY = e.clientY;
+                startScrollTop =
+                    container.scrollTop;
 
-carouselWrapper.addEventListener(
-    "touchmove",
-    (e) => {
+                container.classList.add(
+                    "is-dragging"
+                );
 
-        if (!isDragging) return;
-
-        const currentX =
-            e.touches[0].pageX;
-
-        const distance =
-            currentX - startX;
-
-        carouselWrapper.scrollLeft =
-            startScrollLeft - distance;
-
-        normalizeCarouselPosition();
-
-    },
-    { passive: true }
-);
+                container.setPointerCapture(
+                    e.pointerId
+                );
+            }
+        );
 
 
-carouselWrapper.addEventListener(
-    "touchend",
-    () => {
+        container.addEventListener(
+            "pointermove",
+            (e) => {
 
-        isDragging = false;
+                if (!isDragging) return;
 
+                const distance =
+                    e.clientY - startY;
+
+                container.scrollTop =
+                    startScrollTop - distance;
+            }
+        );
+
+
+        function stopImageDrag(e) {
+
+            if (!isDragging) return;
+
+            isDragging = false;
+
+            container.classList.remove(
+                "is-dragging"
+            );
+
+            if (
+                e.pointerId !== undefined &&
+                container.hasPointerCapture(
+                    e.pointerId
+                )
+            ) {
+                container.releasePointerCapture(
+                    e.pointerId
+                );
+            }
+        }
+
+
+        container.addEventListener(
+            "pointerup",
+            stopImageDrag
+        );
+
+        container.addEventListener(
+            "pointercancel",
+            stopImageDrag
+        );
     }
 );
-
-document.querySelectorAll(".case-study-image").forEach((container) => {
-
-    let isDragging = false;
-    let startY = 0;
-    let startScrollTop = 0;
-
-    container.addEventListener("pointerdown", (e) => {
-
-        isDragging = true;
-
-        container.classList.add("is-dragging");
-
-        startY = e.clientY;
-        startScrollTop = container.scrollTop;
-
-        container.setPointerCapture(e.pointerId);
-    });
-
-    container.addEventListener("pointermove", (e) => {
-
-        if (!isDragging) return;
-
-        const distance = e.clientY - startY;
-
-        container.scrollTop =
-            startScrollTop - distance;
-    });
-
-    const stopDragging = () => {
-        isDragging = false;
-        container.classList.remove("is-dragging");
-    };
-
-    container.addEventListener("pointerup", stopDragging);
-    container.addEventListener("pointercancel", stopDragging);
-    container.addEventListener("lostpointercapture", stopDragging);
-
-}); 
-
-document.querySelectorAll(".carousel-card").forEach((card) => {
-
-    card.addEventListener(
-        "wheel",
-        (e) => {
-
-            // Only take over scrolling if the card
-            // actually has vertical content
-            if (card.scrollHeight <= card.clientHeight) {
-                return;
-            }
-
-            e.preventDefault();
-
-            card.scrollTop += e.deltaY;
-
-        },
-        { passive: false }
-    );
-
-});
-
-
-

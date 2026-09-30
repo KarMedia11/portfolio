@@ -379,30 +379,6 @@ border-radius: 20px;
 }
 
 
-/* =========================================================
-   FLOATING ICONS
-========================================================= */
-
-.floating-icon {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-
-background: var(--card-bg);
-  border-radius: 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow:
-    0 18px 35px rgba(20, 25, 35, 0.10),
-    0 4px 12px rgba(20, 25, 35, 0.04);
-
-  z-index: 5;
-
-  animation: floating 4s ease-in-out infinite;
-}
 
 .floating-icon svg {
   width: 40px;
@@ -3777,6 +3753,7 @@ FOOTER
 ========================================================= */
 .carousel-track-wrapper {
     width: 100%;
+
     overflow-x: auto;
     overflow-y: hidden;
 
@@ -3788,16 +3765,15 @@ FOOTER
 
     user-select: none;
 
-    /* Allow vertical page scrolling on touch */
-    touch-action: pan-y;
-}
-
-.carousel-track-wrapper::-webkit-scrollbar {
-    display: none;
+    touch-action: pan-x;
 }
 
 .carousel-track-wrapper.dragging {
     cursor: grabbing;
+}
+
+.carousel-track-wrapper::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -3807,7 +3783,9 @@ FOOTER
 ========================================================= */
 .carousel-track {
     display: flex;
+
     width: max-content;
+
     gap: 25px;
 
     user-select: none;
@@ -3816,32 +3794,22 @@ FOOTER
 
 
 
-
 /* =========================================================
    CARD
 ========================================================= */
-
 .carousel-card {
+    flex: 0 0 330px;
+
+    height: 500px;
+
     position: relative;
 
-    flex: 0 0 300px;
-    height: 520px;
-
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
 
     border: 1px solid var(--border);
     border-radius: 12px;
 
-    background: #fff;
-
-    scrollbar-width: none;
-
-    cursor: ns-resize;
-
-    transition:
-        transform 0.35s ease,
-        border-color 0.3s ease;
+    background: var(--card-bg);
 }
 
 .carousel-card::-webkit-scrollbar {
@@ -3856,15 +3824,11 @@ FOOTER
 
 .carousel-card img {
     width: 100%;
-    height: auto;
-
-    min-height: 100%;
+    height: 100%;
 
     display: block;
 
-    object-fit: contain;
-
-    background: #fff;
+    object-fit: cover;
 
     user-select: none;
     -webkit-user-drag: none;
@@ -3908,22 +3872,6 @@ FOOTER
     font-size: 20px;
     font-weight: 700;
 }
-
-
-/* =========================================================
-   INFINITE ANIMATION
-========================================================= */
-
-@keyframes carouselMove {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
-}
-
 
 
 /* =========================================================
