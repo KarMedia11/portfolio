@@ -2,606 +2,914 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
 
 
-  <link rel="icon" href="images/favicon-32x32.png" alt="Karen, the Email Designer" type="Logo" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon-32x32.png" alt="Karen, the Email Designer" type="Logo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
-  <div class="custom-cursor"></div>
-  <header>
-    <div class="container navbar">
-      <div class="logo"><strong>Kar</strong><span>TheCreative</span></div>
+    <div class="custom-cursor"></div>
+    <header>
+        <div class="container navbar">
+            <div class="logo"><strong>Kar</strong><span>TheCreative</span></div>
 
-<div class="nav-right">
+            <div class="nav-right">
 
-  <nav>
-    <a class="active" href="#">Home</a>
-    <a href="#projects">Case Studies</a>
-    <a href="#about">About</a>
-    <a href="#contact">Let's Work Together</a>
-  </nav>
+                <nav>
+                    <a class="active" href="#">Home</a>
+                    <a href="#projects">Case Studies</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Let's Work Together</a>
+                </nav>
 
-  <button
-    class="theme-toggle"
-    id="themeToggle"
-    aria-label="Toggle dark and light mode"
-  >
-    <i class="fa-solid fa-sun"></i>
-  </button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
 
-  <button
-    class="menu-toggle"
-    aria-label="Open menu"
-  >
-    <i class="fa-solid fa-bars"></i>
-  </button>
+                <button class="menu-toggle" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
 
-</div>
-
-    </div>
-  </header>
-
-  <section class="hero" id="home">
-    <div class="container hero-grid">
-      <!-- LEFT -->
-
-      <div class="hero-image">
-        <div class="floating-icon icon-palette">
-          <svg viewBox="0 0 64 64">
-            <path d="M32 8C18 8 8 18 8 32s10 24 24 24h5c4 0 6-5 3-8-3-3-1-8 4-8h4c7 0 10-6 8-12C53 15 43 8 32 8Z" />
-            <circle cx="22" cy="27" r="3" />
-            <circle cx="32" cy="20" r="3" />
-            <circle cx="42" cy="27" r="3" />
-          </svg>
-        </div>
-
-        <div class="floating-icon icon-pencil">
-          <svg viewBox="0 0 64 64">
-            <path d="M12 52L16 38L42 12L52 22L26 48L12 52Z" />
-            <path d="M38 16L48 26" />
-          </svg>
-        </div>
-
-        <div class="floating-icon icon-brush">
-          <svg viewBox="0 0 64 64">
-            <rect x="8" y="16" width="48" height="34" rx="6" />
-            <path d="M10 20L32 38L54 20" />
-          </svg>
-        </div>
-
-        <div class="floating-icon icon-sparkle">
-          <svg xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-            <path
-              d="M416 224C398.3 224 384 209.7 384 192C384 174.3 398.3 160 416 160L576 160C593.7 160 608 174.3 608 192L608 352C608 369.7 593.7 384 576 384C558.3 384 544 369.7 544 352L544 269.3L374.6 438.7C362.1 451.2 341.8 451.2 329.3 438.7L224 333.3L86.6 470.6C74.1 483.1 53.8 483.1 41.3 470.6C28.8 458.1 28.8 437.8 41.3 425.3L201.3 265.3C213.8 252.8 234.1 252.8 246.6 265.3L352 370.7L498.7 224L416 224z" />
-          </svg>
-        </div>
-
-
-        <div class="image-blob">
-          <div class="blob-stroke"></div>
-          <img src="images/me-me.png" alt="Profile" />
-        </div>
-      </div>
-      <!-- RIGHT -->
-
-      <div class="hero-content">
-
-        <small>Hello, I'm Karen Cadalo</small>
-
-        <h1>
-          I help e-commerce brands
-          by crafting email campaigns into customer's action.
-        </h1>
-
-        <div class="hero-quick-info">
-
-          <div class="quick-info-item">
-            <span class="quick-info-label">BASED IN</span>
-            <strong>Cagayan de Oro, Philippines</strong>
-          </div>
-
-          <div class="quick-info-item">
-            <span class="quick-info-label">TIME ZONE</span>
-            <strong>Philippine Standard Time · UTC+8</strong>
-          </div>
-
-          <div class="quick-info-item">
-            <span class="quick-info-label">AVAILABLE</span>
-            <strong>20–40 hrs / week · Remote </strong>
-          </div>
+            </div>
 
         </div>
+    </header>
 
-      </div>
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <!-- LEFT -->
 
-    </div>
-  </section>
+            <div class="hero-image">
 
-  <section class="about" id="about">
-    <div class="container about-grid">
-      <!-- LEFT SIDE -->
 
-      <div class="images">
-        <div class="outline-box"></div>
+                <div class="image-blob">
+                    <div class="blob-stroke"></div>
+                    <img src="images/me-me.png" alt="Profile" />
+                </div>
+            </div>
+            <!-- RIGHT -->
 
-        <img src="images/canyoneering.JPG" class="photo photo-large" alt="" />
+            <div class="hero-content">
 
-        <img src="images/laptop-figma.png" class="photo photo-small" alt="" />
+                <small>Hello, I'm Karen Cadalo</small>
 
-        <div class="blue-box"></div>
+                <h1>
+                    I help DTC email teams turn campaign content into Figma/Klaviyo designs.
+                </h1>
 
-      </div>
+                <div class="hero-quick-info">
 
-      <!-- RIGHT SIDE -->
+                    <div class="quick-info-item">
+                        <span class="quick-info-label">BASED IN</span>
+                        <strong>Cagayan de Oro, Philippines</strong>
+                    </div>
 
-      <div class="content">
-        <span class="subtitle">ABOUT </span>
+                    <div class="quick-info-item">
+                        <span class="quick-info-label">TIME ZONE</span>
+                        <strong>Philippine Standard Time · UTC+8</strong>
+                    </div>
 
-        <h1>Get to know me</h1>
+                    <div class="quick-info-item">
+                        <span class="quick-info-label">AVAILABLE</span>
+                        <strong>20–40 hrs / week · Remote </strong>
+                    </div>
 
-        <p>
-          I’m an Email Designer focused on responsive, brand-consistent email design, bringing a UI/UX foundation in
-          Figma to email marketing.
-          <br /><br />My UI/UX work began when our team was asked to build a Job Request System from scratch for a
-          university Maintenance Department, <br /> so we conducted extensive research into their workflow, including
-          order descriptions, job types, departments, and categories.
-          <br />I translated our research findings and requirements into clear interface structures in Figma while
-          working closely with the client, project manager, frontend and backend developer, then coordinated with the
-          team to refine and present the system before the university break without putting the project deadline at
-          risk.
+                </div>
 
-        <p>
-          You’ll get organized Figma files, clear communication, and responsive email designs delivered on schedule. I
-          keep feedback visible, project updates straightforward, and design details consistent from the first draft to
-          final handoff.
+            </div>
 
-      </div>
-              <div class="quick-facts">
-          <h3>QUICK FACTS</h3>
+        </div>
+    </section>
 
-          <div class="fact">
-            <strong>Experience in Figma: </strong>
-            5 years (2021)
-          </div>
-          <div class="fact">
-            <strong>English Proficiency: </strong>
-             Bilingual Fluent
-          </div>
+    <section class="about" id="about">
+        <div class="container about-grid">
+            <!-- LEFT SIDE -->
 
-          <div class="fact">
-            <strong>Languages: </strong>
-            English/Filipino 
-</div>
-          <div class="fact">
-            <strong>Education: </strong>
-            Bachelor of Science in Information Technology, with coursework in UI/UX Design & prototyping,
-            Human Computer Interaction, Web Development (HTML/CSS).
-          </div>
-        
-  </section>
+            <div class="images">
+                <div class="outline-box"></div>
 
-<!-- =========================================================
+               
+
+                <img src="images/laptop-figma.png" class="photo photo-small" alt="" />
+
+                <div class="blue-box"></div>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+
+            <div class="content">
+                <span class="subtitle">ABOUT </span>
+
+                <h1>Get to know me</h1>
+
+                <p>
+                    I’m an Email Designer focused on responsive, brand-consistent email design, bringing a UI/UX
+                    foundation in
+                    Figma to email marketing.
+                    <br /><br />
+                    My design work started when our team built a Job Request System from scratch for a university
+                    Maintenance Department. We researched job types, departments, categories, and order details,
+                    then turned those requirements into Figma interfaces while working with the project manager and
+                    developers. That experience now influences how I structure email content and decide what needs to
+                    stand out first.
+
+
+                <p> 
+                    You’ll get organized Figma files, clear email layouts, and straightforward communication from first
+                    draft to final handoff.
+                    I keep feedback visible and design details consistent so your team can move into the next step
+                    without guessing.
+
+</p>
+            </div>
+            <div class="quick-facts">
+                <h3>QUICK FACTS</h3>
+
+                <div class="fact">
+                    <strong>Figma Experience: </strong>
+                    5 years (2021)
+                </div>
+                <div class="fact">
+                    <strong>English Proficiency: </strong>
+                    Fluent (C1)
+                </div>
+
+                <div class="fact">
+                    <strong>Languages: </strong>
+                    English/Filipino
+                </div>
+                <div class="fact">
+                    <strong>Primary Work Style </strong>
+                    Remote, collaborative, and feedback-driven
+
+                </div>
+
+    </section>
+
+    <!-- =========================================================
+     WHAT I DELIVER
+========================================================= -->
+
+    <section class="deliver-section" id="deliver">
+
+        <div class="deliver-container">
+
+            <div class="deliver-heading">
+                <h2>What I deliver.</h2>
+                <div class="deliver-line"></div>
+            </div>
+
+            <div class="deliver-grid">
+
+                <!-- 01 -->
+                <div class="deliver-item">
+                    <span class="deliver-number">01</span>
+
+                    <h3>Lifecycle Flow Emails</h3>
+
+                    <div class="deliver-item-line"></div>
+
+                    <p>
+                        I design Welcome, Abandonment, Post Purchase,
+                        and Winback emails in Figma around the
+                        message, product, and CTA.
+                    </p>
+                </div>
+
+
+                <!-- 02 -->
+                <div class="deliver-item">
+                    <span class="deliver-number">02</span>
+
+                    <h3>Promotional Email Design</h3>
+
+                    <div class="deliver-item-line"></div>
+
+                    <p>
+                        I turn promotional campaign content into
+                        structured layouts, using Photoshop to prepare
+                        and refine product imagery before it enters the
+                        email design.
+                    </p>
+                </div>
+
+
+                <!-- 03 -->
+                <div class="deliver-item">
+                    <span class="deliver-number">03</span>
+
+                    <h3>Consistent Brand Emails</h3>
+
+                    <div class="deliver-item-line"></div>
+
+                    <p>
+                        I carry the existing brand direction into the email,
+                        from its colors and type choices to the way
+                        products and content are arranged.
+                    </p>
+                </div>
+
+
+                <!-- 04 -->
+                <div class="deliver-item">
+                    <span class="deliver-number">04</span>
+
+                    <h3>Mobile-Ready Email Layouts</h3>
+
+                    <div class="deliver-item-line"></div>
+
+                    <p>
+                        I check the hierarchy, spacing, and CTA placement
+                        with smaller screens in mind, so the important
+                        content doesn't get buried.
+                    </p>
+                </div>
+
+
+                <!-- 05 -->
+                <div class="deliver-item">
+                    <span class="deliver-number">05</span>
+
+                    <h3>Reusable Email Components</h3>
+
+                    <div class="deliver-item-line"></div>
+
+                    <p>
+                        I build repeated elements as Figma components
+                        so the same design pieces can be reused across
+                        related emails.
+                    </p>
+                </div>
+
+
+                <!-- 06 -->
+                <div class="deliver-item">
+                    <span class="deliver-number">06</span>
+
+                    <h3>Faster Visual Production</h3>
+
+                    <div class="deliver-item-line"></div>
+
+                    <p>
+                        I use AI when a campaign needs a supporting
+                        product visual or content-related asset quickly,
+                        then refine it to fit the email design.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================================================
+     HOW I'LL WORK
+========================================================= -->
+
+    <section class="process-section" id="process">
+
+        <div class="container process-container">
+
+            <!-- HEADING -->
+            <div class="process-heading">
+
+                <h2>How I'll work.</h2>
+
+                <div class="process-heading-line"></div>
+
+                <p>
+                    The Brief to Delivery Method
+                </p>
+
+            </div>
+
+
+            <!-- PROCESS -->
+            <div class="process-grid">
+
+                <!-- STEP 01 -->
+                <div class="process-step">
+
+                    <div class="process-number">
+                        01
+                    </div>
+
+                    <h3>Discovery</h3>
+
+                    <p>
+                        I review the email type, campaign goal, offer,
+                        key message, and CTA before I start the design.
+                        I use these details to decide what the reader
+                        needs to see first.
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 02 -->
+                <div class="process-step">
+
+                    <div class="process-number">
+                        02
+                    </div>
+
+                    <h3>Setup</h3>
+
+                    <p>
+                        I organize the copy and product content into
+                        sections before building the layout in Figma.
+                        I set up the file with components, spacing,
+                        typography, and brand elements based on the
+                        available direction.
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 03 -->
+                <div class="process-step">
+
+                    <div class="process-number">
+                        03
+                    </div>
+
+                    <h3>Execution</h3>
+
+                    <p>
+                        I build the email in Figma with mobile viewing,
+                        visual hierarchy, product presentation, and CTA
+                        placement in mind. I complete each design review
+                        within the agreed weekly schedule.
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 04 -->
+                <div class="process-step">
+
+                    <div class="process-number">
+                        04
+                    </div>
+
+                    <h3>Reporting</h3>
+
+                    <p>
+                        I keep the latest design and feedback in the same
+                        Figma file so there is one working reference.
+                        I provide a Figma file with the updated design
+                        and visible feedback for each review round.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================================================
      TOOLS I USE
 ========================================================= -->
 
-<section class="tools-section" id="tools">
+    <!-- <section class="tools-section" id="tools">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="section-title">
-            <h2>Tools I work in</h2>
+            <div class="section-title">
+                <h2>Tools I work in</h2>
+            </div>
+
+            <div class="tools-grid">
+
+           
+                <div class="tool-category">
+                    <h3>Design</h3>
+
+                    <div class="tool-list">
+
+             
+
+                        <div class="tool">
+                            <img src="images/figma.png" alt="Figma">
+                            <span>Figma</span>
+                        </div>
+
+                        <div class="tool">
+                            <img src="images/photoshop.png" alt="Photoshop">
+                            <span>Photoshop</span>
+                        </div>
+
+                        <div class="tool">
+                            <img src="images/canva.png" alt="Canva">
+                            <span>Canva</span>
+                        </div>
+
+                    </div>
+
+                    <h3 class="ai-tools-title">AI Tools</h3>
+
+                    <div class="tool-list">
+
+                        <div class="tool">
+                            <img src="images/chatgpt.png" alt="ChatGPT">
+                            <span>ChatGPT</span>
+                        </div>
+
+                        <div class="tool">
+                            <img src="images/claude-color.png" alt="Claude">
+                            <span>Claude</span>
+                        </div>
+
+                        <div class="tool">
+                            <img src="images/Gemini.png" alt="Gemini">
+                            <span>Gemini</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tool-category">
+                    <h3>Documents</h3>
+
+                    <div class="tool-list">
+
+                        <div class="tool">
+                            <img src="images/google.png" alt="Google Workspace">
+                            <span>Google Docs / Sheets / Drive</span>
+                        </div>
+                        <div class="tool">
+                            <img src="images/Ms Word.png" alt="Microsoft 365">
+                            <span>Word</span>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="tool-category">
+                    <h3>Communication</h3>
+
+                    <div class="tool-list">
+
+                        <div class="tool">
+                            <img src="images/slack.png" alt="Slack">
+                            <span>Slack</span>
+                        </div>
+
+                        <div class="tool">
+                            <img src="images/zoom.png" alt="Zoom">
+                            <span>Zoom</span>
+                        </div>
+
+                        <div class="tool">
+                            <img src="images/msteams.png" alt="Microsoft Teams">
+                            <span>Microsoft Teams</span>
+                        </div>
+
+                    </div>
+                </div>
+
+
+       
+                <div class="tool-category">
+                    <h3>Project Management</h3>
+
+                    <div class="tool-list">
+
+                        <div class="tool">
+                            <img src="images/Notion.png" alt="Notion">
+                            <span>Notion</span>
+                        </div>
+
+                        <div class="tool">
+                            <img src="images/clickup.png" alt="ClickUp">
+                            <span>ClickUp</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="tools-grid">
+    </section> -->
 
-            <!-- DESIGN -->
-<div class="tool-category">
-    <h3>Design</h3>
+    <!-- =========================================================
+     ANIMATED PROJECT CAROUSEL
+========================================================= -->
 
-    <div class="tool-list">
+<section class="project-carousel">
 
-        <!-- DESIGN TOOLS -->
+    <div class="carousel-heading">
+        <span>SELECTED WORK</span>
+        <h2>Crafting Emails</h2>
+    </div>
 
-        <div class="tool">
-            <img src="images/figma.png" alt="Figma">
-            <span>Figma</span>
-        </div>
+    <div class="carousel-track-wrapper">
 
-        <div class="tool">
-            <img src="images/photoshop.png" alt="Photoshop">
-            <span>Photoshop</span>
-        </div>
+        <div class="carousel-track">
 
-        <div class="tool">
-            <img src="images/canva.png" alt="Canva">
-            <span>Canva</span>
+            <div class="carousel-card">
+                <img src="images/Slices/Dakine.png" alt="Project 1">
+    
+                <div class="carousel-overlay">
+                    <!-- <span>01</span> -->
+             
+                </div>
+            </div>
+
+            <div class="carousel-card">
+                <img src="images/Slices/Reign.png" alt="Project 2">
+                <div class="carousel-overlay">
+                    
+                </div>
+            </div>
+
+            <div class="carousel-card">
+                <img src="images/Slices/Rare Beauty.png" alt="Project 3">
+                <div class="carousel-overlay">
+                 
+                </div>
+            </div>
+
+            <div class="carousel-card">
+                <img src="images/Slices/Allbirds.png" alt="Project 4">
+                <div class="carousel-overlay">
+               
+                </div>
+            </div>
+
+            <div class="carousel-card">
+                 <img src="images/Slices/Yo-gaya.png" alt="Project 5">
+
+                <div class="carousel-overlay">
+               
+                </div>
+            </div>
+
+            <div class="carousel-card">
+            <img src="images/Slices/Riviera.png" alt="Project 6">
+                <div class="carousel-overlay">
+               
+                </div>
+            </div>
+
+            <div class="carousel-card">
+                <img src="images/Slices/A&B.png" alt="Project 7">
+                <div class="carousel-overlay">
+               
+                </div>
+            </div>
+                        <div class="carousel-card">
+ <img src="images/Slices/CK.png" alt="Project 8">
+                <div class="carousel-overlay">
+               
+                </div>
+            </div>
+
+                                    <div class="carousel-card">
+                <img src="images/Slices/Lemme.png" alt="Project 9">
+                <div class="carousel-overlay">
+               
+                </div>
+            </div>
+            </div>
+
+
+            </div>
+
         </div>
 
     </div>
 
+    
 
-    <!-- AI TOOLS -->
-
-    <h3 class="ai-tools-title">AI Tools</h3>
-
-    <div class="tool-list">
-
-        <div class="tool">
-            <img src="images/chatgpt.png" alt="ChatGPT">
-            <span>ChatGPT</span>
-        </div>
-
-        <div class="tool">
-            <img src="images/claude-color.png" alt="Claude">
-            <span>Claude</span>
-        </div>
-
-        <div class="tool">
-            <img src="images/Gemini.png" alt="Gemini">
-            <span>Gemini</span>
-        </div>
-
-    </div>
+</section>
 
 </div>
 
 
+    <section id="projects">
 
-            <!-- PRODUCTIVITY -->
-            <div class="tool-category">
-                <h3>Documents</h3>
+        <div class="case-studies-container"> 
+      
 
-                <div class="tool-list">
+            <!-- CASE STUDY CARD -->
+            <article class="case-study-card">
+                
 
-                    <div class="tool">
-                        <img src="images/google.png" alt="Google Workspace">
-                        <span>Google Docs / Sheets / Drive</span>
+                <div class="before-after">
+                    <!-- BEFORE IMAGE -->
+                    <img src="images/Slices/Riviera_before.png" alt="Project before redesign"
+                        class="before-after-img before-img">
+
+                    <!-- AFTER IMAGE -->
+                    <div class="after-layer">
+                        <img src="images/Slices/Riviera_after.png" alt="Project after redesign"
+                            class="before-after-img">
                     </div>
-                                        <div class="tool">
-                        <img src="images/Ms Word.png" alt="Microsoft 365">
-                        <span>Word</span>
+
+                    <!-- LABELS -->
+                    <span class="compare-label before-label">BEFORE</span>
+                    <span class="compare-label after-label">REDESIGNED</span>
+
+                    <!-- DRAG HANDLE -->
+                    <div class="compare-handle" aria-hidden="true">
+                        <span class="handle-line"></span>
+
+                        <span class="handle-circle">
+                            <span>‹</span>
+                            <span>›</span>
+                        </span>
+
+                        <span class="handle-line"></span>
                     </div>
+
+                    <!-- ACCESSIBLE SLIDER -->
+                    <input type="range" min="0" max="100" value="50" class="compare-range"
+                        aria-label="Compare before and after images">
+                </div>
+
+
+
+
+
+                <!-- RIGHT CONTENT -->
+                <div class="case-study-content"> 
+                    
+    <span class="case-study-label">CASE STUDY •  01 </span>
+
+                    <h2>How I Helped Riviera Rearrange The Message in 24 Hours</h2>
+
+
+                    <div class="case-study-info">
+
+                        <!-- CHALLENGE -->
+                        <div class="case-study-block">
+
+                            <h3>PROBLEM</h3>
+
+                            <p>
+                                The Riviera hero did not present the campaign message in a clear reading order, with the
+                                small banner placed above the main content and the CTA separated below it, making the
+                                key message harder to scan quickly. The body content also contained flavor mismatches,
+                                with the Peach Iced Tea section using Lemon Iced Tea copy and the Lemon Iced Tea section
+                                using Peach Iced Tea content, leaving the flavor information incomplete.
+                            </p>
+
+                        </div>
+
+
+                        <!-- SOLUTION -->
+                        <div class="case-study-block">
+
+                            <h3>Solution</h3>
+
+                            <p>
+                                I reorganized the hero hierarchy so the Welcome to Riviera message leads into the
+                                delivery offer, code, and Shop Now CTA in a clearer reading order. I replaced the
+                                original image with a Mediterranean iced tea scene that supports the product message,
+                                keeping the color palette aligned with Riviera’s brand direction.
+                            </p>
+
+                        </div>
+
+
+                        <!-- RESULT -->
+                        <div class="case-study-block">
+
+                            <h3>Result</h3>
+
+                            <p>
+                              The Riviera email redesign was completed within 24 hours. No claiming a measured campaign performance result.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- VIEW MORE -->
+                    <a href="projects/project6.html" class="case-study-view-more">
+                        How I build it in Klaviyo
+                    </a>
 
                 </div>
-            </div>
+
+            </article>
 
 
-            <!-- COMMUNICATION -->
-            <div class="tool-category">
-                <h3>Communication</h3>
+<div class="case-study-actions">
 
-                <div class="tool-list">
+    <!-- <a href="#" class="view-all-button">
+        VIEW ALL CASE STUDIES
+    </a> -->
 
-                    <div class="tool">
-                        <img src="images/slack.png" alt="Slack">
-                        <span>Slack</span>
-                    </div>
+    <a
+        href="YOUR-FIGMA-LINK-HERE"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="figma-button"
+    >
+        VIEW ON FIGMA FILES
+        <span>↗</span>
+    </a>
 
-                    <div class="tool">
-                        <img src="images/zoom.png" alt="Zoom">
-                        <span>Zoom</span>
-                    </div>
-
-                    <div class="tool">
-                        <img src="images/msteams.png" alt="Microsoft Teams">
-                        <span>Microsoft Teams</span>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <!-- PROJECT MANAGEMENT -->
-            <div class="tool-category">
-                <h3>Project Management</h3>
-
-                <div class="tool-list">
-
-                    <div class="tool">
-                        <img src="images/Notion.png" alt="Notion">
-                        <span>Notion</span>
-                    </div>
-
-                    <div class="tool">
-                        <img src="images/clickup.png" alt="ClickUp">
-                        <span>ClickUp</span>
-                    </div>
-
-                </div>
-            </div>
+</div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
 
-  <section class="projects" id="projects">
-      <div class="projects-heading">
-     <!-- <h2>Projects</h2> -->
-  </div>
-    <div class="carousel-container">
 
-        <div class="projects-grid">
-
-            <!-- PROJECT 1 -->
-            <a href="/projects/project1.html" class="project-card">
-                <img src="images/AMORETTI-MOCKUP.png" alt="Amoretti Email Design">
-
-                <div class="overlay">
-                    <span class="proj-label">Email Marketing Design</span>
-                    <span class="proj-title">Amoretti</span>
-                    <span class="proj-link-text">View ↗</span>
-                </div>
-            </a>
-
-            <!-- PROJECT 2 -->
-            <a href="/projects/project2.html" class="project-card">
-                <img src="images/mother's day.png" alt="Mother's Day Promo Campaign">
-
-                <div class="overlay">
-                    <span class="proj-label">Email Marketing Design</span>
-                    <span class="proj-title">Mother's Day Promo Campaign</span>
-                    <span class="proj-link-text">View ↗</span>
-                </div>
-            </a>
-
-            <!-- PROJECT 3 -->
-            <a href="/projects/project3.html" class="project-card">
-                <img src="images/MOCKUP.gif" alt="Reign Email Design">
-
-                <div class="overlay">
-                    <span class="proj-label">Email Marketing Design</span>
-                    <span class="proj-title">Reign</span>
-                    <span class="proj-link-text">View ↗</span>
-                </div>
-            </a>
-
-            <!-- PROJECT 4 -->
-            <a href="/projects/project4.html" class="project-card">
-                <img src="images/kloudy.png" alt="Kloudy Email Design">
-
-                <div class="overlay">
-                    <span class="proj-label">Email Marketing Design</span>
-                    <span class="proj-title">Kloudy</span>
-                    <span class="proj-link-text">View ↗</span>
-                </div>
-            </a>
-
-            <!-- PROJECT 5 -->
-            <a href="/projects/project5.html" class="project-card">
-                <img src="images/PACSAFE-PHONE.png" alt="Pacsafe Email Design">
-
-                <div class="overlay">
-                    <span class="proj-label">Email Marketing Design</span>
-                    <span class="proj-title">Pacsafe</span>
-                    <span class="proj-link-text">View ↗</span>
-                </div>
-            </a>
-
-            <!-- PROJECT 6 -->
-            <a href="/projects/project6.html" class="project-card">
-                <img src="images/vs-ipad.png" alt="Riviera Email Design">
-
-                <div class="overlay">
-                    <span class="proj-label">Email Marketing Design</span>
-                    <span class="proj-title">Riviera</span>
-                    <span class="proj-link-text">View ↗</span>
-                </div>
-            </a>
-
-        </div>
-
-    </div>
-</section> 
-
-<section class="figma-section">
-
-    <div class="figma-heading">
-        <h2>Design In Figma</h2>
-
-        <p>
-            Explore the design process, structure, and responsive email layouts
-            created inside Figma.
-        </p>
-    </div>
-
-    <div class="figma-preview">
-        <img
-            src="images/Screenshot Figma.png"
-            alt="Email design process in Figma"
-        />
-    </div>
-
-</section> 
-
-<!-- =========================================================
+    <!-- =========================================================
      WHY WORK WITH ME
 ========================================================= -->
 
-<section class="why-work-section" id="why-work">
+    <section class="why-work-section" id="why-work">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="why-work-heading">
-          
-            <h2>Why Work with Me</h2>
+            <div class="why-work-heading">
+
+                <h2>Why Work With Me</h2>
+            </div>
+
+
+            <div class="why-work-grid">
+
+                <!-- CARD 1 -->
+                <div class="why-work-card">
+
+                    <div class="why-work-number">01</div>
+
+                    <h3>STRONG FIGMA</h3>
+
+                    <p>
+                        Highly skilled in responsive layouts, Auto Layout, interactive components, variables, advanced
+                        effects, AI-driven workflows, prototyping, accessibility, and team and developer collaboration,
+                        demonstrated through completed course projects, knowledge quizzes, and a final creative
+                        distinction project.
+                    </p>
+
+                </div>
+
+
+                <!-- CARD 2 -->
+                <div class="why-work-card">
+
+                    <div class="why-work-number">02</div>
+
+                    <h3>MOBILE FIRST DESIGN</h3>
+
+                    <p>
+                        I design with typography, hierarchy, composition, mobile screens, and inbox rendering in mind,
+                        including how dark mode can affect designs across Gmail, Outlook, and Yahoo, and I adapt email
+                        layouts to different brand directions with clear content structure.
+                    </p>
+
+                </div>
+
+
+                <!-- CARD 3 -->
+                <div class="why-work-card">
+
+                    <div class="why-work-number">03</div>
+
+                    <h3>ORGANZED DESIGN WORKFLOW </h3>
+
+                    <p>
+                        I organize email projects around clear deliverables, design versions, and deadlines. I keep the
+                        working Figma file structured so revisions are easier to track.
+                    </p>
+
+                </div>
+
+
+                <!-- CARD 4 -->
+                <div class="why-work-card">
+
+                    <div class="why-work-number">04</div>
+
+                    <h3>FEEDBACK AND GUIDELINES</h3>
+
+                    <p>
+                        I take direct feedback and apply it to the next design version. I also work from established
+                        brand guidelines and carry their visual direction into the email layout.
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
 
-
-        <div class="why-work-grid">
-
-            <!-- CARD 1 -->
-            <div class="why-work-card">
-
-                <div class="why-work-number">01</div>
-
-                <h3>Time Zone Advantage</h3>
-
-                <p>
-                    Based in the Philippines (UTC+8), My business hours overlap with US Eastern morning, US Pacific evening, UK afternoon, and AU morning. The work moves while you sleep.
-                </p>
-
-            </div>
+    </section>
 
 
-            <!-- CARD 2 -->
-            <div class="why-work-card">
-
-                <div class="why-work-number">02</div>
-
-                <h3>Clear English Communication</h3>
-
-                <p>
-                    I’m comfortable communicating in English for project
-                    discussions, design feedback, documentation, and
-                    day-to-day collaboration with remote teams.
-                </p>
-
-            </div>
-
-
-            <!-- CARD 3 -->
-            <div class="why-work-card">
-
-                <div class="why-work-number">03</div>
-
-                <h3>Figma Foundation to Expert</h3>
-
-                <p>
-                    My background in UI/UX gives me a structured approach
-                    to design. I consider hierarchy, usability, responsive
-                    layouts, and the user's experience.
-                </p>
-
-            </div>
-
-
-            <!-- CARD 4 -->
-            <div class="why-work-card">
-
-                <div class="why-work-number">04</div>
-
-                <h3>Organized & Reliable</h3>
-
-                <p>
-                    You get senior-level work at a rate that lets you reinvest in growth. That's the math behind hiring me.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- =========================================================
+    <!-- =========================================================
      CONTACT / LET'S TALK
 ========================================================= -->
 
-<section class="contact-section" id="contact">
+    <section class="contact-section" id="contact">
 
-    <div class="container contact-container">
+        <div class="container contact-container">
 
-        <!-- LEFT -->
-        <div class="contact-main">
+            <!-- LEFT -->
+            <div class="contact-main">
 
-            <h2>Let's talk.</h2>
+                <h2>Let's talk.</h2>
 
-            <div class="contact-line"></div>
+                <div class="contact-line"></div>
 
-            <p class="contact-intro">
-                Let's make something that works beautifully for your
-                brand and your customers.
+                <p class="contact-intro">
+                    Let's make something that works beautifully for your
+                    brand and your customers.
+                </p>
+
+                <a href="https://calendly.com/karencadalo-digital/30min" class="contact-cta" target="_blank"
+                    rel="noopener noreferrer">
+                    BOOK A DISCOVERY CALL <span>→</span>
+                </a>
+
+            </div>
+
+
+            <!-- RIGHT -->
+            <div class="contact-details">
+
+                <span class="contact-label">
+                    OR REACH OUT DIRECTLY
+                </span>
+
+                <div class="contact-divider"></div>
+
+                <div class="contact-item">
+                    <span>EMAIL</span>
+                    <a href="mailto:cadalo.karen@gmail.com">
+                        cadalo.karen@gmail.com
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <span>LINKEDIN</span>
+                    <a href="https://www.linkedin.com/in/karen-cadalo/" target="_blank" rel="noopener noreferrer">
+                        linkedin.com/in/karen-cadalo/
+                    </a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER NOTE -->
+        <div class="container contact-footer">
+
+            <p>
+                Working hours: Mon–Fri, 8pm–9am PHT (UTC+8)
+                <span>·</span>
+                Replies within 4 business hours
             </p>
 
-            <a
-                href="https://calendly.com/karencadalo-digital/30min"
-                class="contact-cta"
-          
-                                    target="_blank"
-                    rel="noopener noreferrer"
-            >
-                BOOK A DISCOVERY CALL <span>→</span>
-            </a>
-
         </div>
 
+    </section>
 
-        <!-- RIGHT -->
-        <div class="contact-details">
+    <footer class="footer">
+        <div class="footer-container">
 
-            <span class="contact-label">
-                OR REACH OUT DIRECTLY
-            </span>
+            <p>© 2026 Developed by Karen Cadalo</p>
 
-            <div class="contact-divider"></div>
-
-            <div class="contact-item">
-                <span>EMAIL</span>
-                <a href="mailto:cadalo.karen@gmail.com">
-                    cadalo.karen@gmail.com
-                </a>
-            </div>
-
-            <div class="contact-item">
-                <span>LINKEDIN</span>
-                <a
-                    href="https://www.linkedin.com/in/karen-cadalo/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    linkedin.com/in/karen-cadalo/
-                </a>
-            </div>
-
-
-        </div>
-
-    </div>
-
-
-    <!-- FOOTER NOTE -->
-    <div class="container contact-footer">
-
-        <p>
-            Working hours: Mon–Fri, 8pm–9am PHT (UTC+8)
-            <span>·</span>
-            Replies within 4 business hours
-        </p>
-
-    </div>
-
-</section>
-
-<footer class="footer">
-  <div class="footer-container">
-
-    <p>© 2026 Developed by Karen Cadalo</p>
-
-    <div class="footer-right">
-<!-- <a href="mailto:hello@karencadalo.com?subject=An Inquiry" class="footer-email">
+            <div class="footer-right">
+                <!-- <a href="mailto:hello@karencadalo.com?subject=An Inquiry" class="footer-email">
     <i class="fa-solid fa-envelope"></i>
     hello@karencadalo.com
 </a> -->
 
-      <!-- <a
+                <!-- <a
         href="https://www.linkedin.com/in/YOUR-LINKEDIN/"
         target="_blank"
         rel="noopener noreferrer"
@@ -611,13 +919,13 @@
       </a>
     </div> -->
 
-  </div>
-</footer>
+            </div>
+    </footer>
 
-  </script>
-  <script src="script.js"></script>
-  <script defer src="/_vercel/insights/script.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RCPLRD82K2"></script>
+    </script>
+    <script src="script.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RCPLRD82K2"></script>
 </body>
 
 </html>
