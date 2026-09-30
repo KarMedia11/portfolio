@@ -4136,4 +4136,49 @@ FOOTER
 
 }
 
+/* =========================================================
+   FIGMA SECTION
+========================================================= */
+
+.figma-section {
+    text-align: center;
+    
+}
+
+.figma-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.figma-heading h2 {
+    font-size: 52px;
+    line-height: 1.1;
+    font-weight: 800;
+    color: var(--heading);
+    margin-bottom: 20px;
+}
+
+.figma-heading p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.figma-preview {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid #ddd;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .10);
+}
+
+.figma-preview img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
