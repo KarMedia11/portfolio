@@ -4135,3 +4135,483 @@ FOOTER
     }
 
 }
+
+
+/* =========================================================
+   ANIMATED PROJECT CAROUSEL
+========================================================= */
+
+.project-carousel {
+    width: 100%;
+  
+  
+    background: var(--primary-bg);
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.carousel-heading {
+    width: min(100% - 80px, 1360px);
+    margin: 0 auto 55px;
+}
+
+.carousel-heading span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--accent);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.carousel-heading h2 {
+    margin: 0;
+
+    color: var(--heading);
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(36px, 5vw, 62px);
+    font-weight: 800;
+
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.carousel-heading h2::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 4px;
+
+    margin-top: 18px;
+
+    background: var(--accent);
+}
+
+
+/* =========================================================
+   TRACK
+========================================================= */
+.carousel-track-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    position: relative;
+
+    cursor: grab;
+
+    scrollbar-width: none;
+
+    user-select: none;
+
+    /* Allow vertical page scrolling on touch */
+    touch-action: pan-y;
+}
+
+.carousel-track-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-track-wrapper.dragging {
+    cursor: grabbing;
+}
+
+
+
+/* =========================================================
+   TRACK
+========================================================= */
+.carousel-track {
+    display: flex;
+    width: max-content;
+    gap: 25px;
+
+    user-select: none;
+}
+
+
+
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.carousel-card {
+    position: relative;
+
+    flex: 0 0 300px;
+    height: 520px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    background: #fff;
+
+    scrollbar-width: none;
+
+    cursor: ns-resize;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.3s ease;
+}
+
+.carousel-card::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.carousel-card img {
+    width: 100%;
+    height: auto;
+
+    min-height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+    background: #fff;
+
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.carousel-overlay {
+    position: absolute;
+
+    inset: auto 0 0 0;
+
+    padding: 35px 25px 25px;
+
+
+    color: #ffffff;
+}
+
+.carousel-overlay span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--accent);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.carousel-overlay h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   INFINITE ANIMATION
+========================================================= */
+
+@keyframes carouselMove {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .project-carousel {
+        padding: 90px 0 100px;
+    }
+
+    .carousel-heading {
+        width: calc(100% - 50px);
+    }
+
+    .carousel-card {
+        flex-basis: 290px;
+        height: 350px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .project-carousel {
+        padding: 75px 0 85px;
+    }
+
+    .carousel-heading {
+        width: calc(100% - 40px);
+        margin-bottom: 40px;
+    }
+
+    .carousel-heading span {
+        font-size: 11px;
+        letter-spacing: 2.5px;
+    }
+
+    .carousel-heading h2 {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .carousel-heading h2::after {
+        width: 55px;
+        height: 3px;
+        margin-top: 15px;
+    }
+
+    .carousel-track {
+        gap: 16px;
+
+        animation-duration: 28s;
+    }
+
+    .carousel-card {
+        flex-basis: 250px;
+        height: 320px;
+
+        border-radius: 10px;
+    }
+
+    .carousel-overlay {
+        padding: 30px 18px 20px;
+    }
+
+    .carousel-overlay h3 {
+        font-size: 17px;
+    }
+
+    .carousel-track-wrapper::before,
+    .carousel-track-wrapper::after {
+        width: 50px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .project-carousel {
+        padding: 65px 0 75px;
+    }
+
+    .carousel-heading {
+        width: calc(100% - 32px);
+    }
+
+    .carousel-heading h2 {
+        font-size: 32px;
+    }
+
+    .carousel-card {
+        flex-basis: 220px;
+        height: 285px;
+    }
+
+    .carousel-track {
+        gap: 14px;
+
+        animation-duration: 25s;
+    }
+
+}
+
+   /* =========================================================
+   SELECTED CASE STUDY GALLERY
+========================================================= */
+
+.case-study-gallery {
+    width: 100%;
+    height: 800px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    cursor: grab;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    overscroll-behavior-y: contain;
+}
+
+.case-study-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================================
+   IMAGES
+========================================================= */
+
+.case-study-gallery img {
+    width: 100%;
+    height: auto;
+
+    flex-shrink: 0;
+
+    display: block;
+
+    object-fit: contain;
+
+    user-select: none;
+    -webkit-user-drag: none;
+
+    border-radius: 12px;
+}
+
+
+
+/* =========================================================
+   DRAGGING
+========================================================= */
+
+.case-study-gallery.is-dragging {
+    cursor: grabbing;
+} 
+
+/* =========================================================
+   CASE STUDY ACTION BUTTONS
+========================================================= */
+
+.case-study-actions {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 35px;
+}
+
+
+/* =========================================================
+   BOTH BUTTONS
+========================================================= */
+
+.case-study-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 14px 24px;
+
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+
+    background: transparent;
+    color: var(--heading);
+
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.case-study-actions a:hover {
+    background: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+}
+
+
+/* Figma arrow */
+
+.figma-button span {
+    font-size: 16px;
+    line-height: 1;
+
+    transition: transform 0.25s ease;
+}
+
+.figma-button:hover span {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .case-study-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .case-study-actions a {
+        width: auto;
+    }
+
+}
+
